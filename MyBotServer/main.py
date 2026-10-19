@@ -12,9 +12,9 @@ def home():
     return "Mera Telegram Bot Render Par 24/7 Live Hai!", 200
 
 # 2. टेलीग्राम बॉट सेटअप
-# यहाँ अपना असली टोकन डालें (उद्धरण चिह्नों "" के अंदर)
-BOT_TOKEN = "8474712057:AAHAOpGfcm5fdoiwgyF9dYQyzaCH4_46J4g" 
-bot = telebot.Telebot(BOT_TOKEN)
+# ध्यान दें: यहाँ 'TeleBot' में B बड़ा (Capital) कर दिया गया है ताकि एरर न आए
+BOT_TOKEN = "8474712057:AAHAOpGfcm5fdoiwgyF9dYQyzaCH4_46J4g"
+bot = telebot.TeleBot(BOT_TOKEN)
 
 # जब कोई यूजर /start या /help भेजेगा, तो यह फंक्शन चलेगा
 @bot.message_handler(commands=['start', 'help'])
@@ -33,12 +33,11 @@ def echo_all(message):
     except Exception as e:
         print(f"Error in echo: {e}")
 
-# बॉट को बिना रुके (Continuous Polling) चलाने का फंक्शन
+# बॉट को बिना रुके चलाने का फंक्शन
 def run_bot():
     print("Starting Telegram Bot Polling...")
     while True:
         try:
-            # non_stop=True रखने से नेटवर्क एरर आने पर भी बॉट बंद नहीं होता
             bot.infinity_polling(timeout=10, long_polling_timeout=5)
         except Exception as e:
             print(f"Bot polling encountered an error: {e}")
