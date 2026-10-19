@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "com.example.tictactoe.app-debug-30:/drawable_card_bg.xml.flat",
+        "source": "com.example.tictactoe.app-main-32:/drawable/card_bg.xml"
+    },
+    {
+        "merged": "com.example.tictactoe.app-debug-30:/anim_slide_up.xml.flat",
+        "source": "com.example.tictactoe.app-main-32:/anim/slide_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\drawable_tile_selector.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\drawable\\tile_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\drawable_tile_winner.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\drawable\\tile_winner.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\anim_slide_up.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\anim\\slide_up.xml"
+    },
+    {
+        "merged": "com.example.tictactoe.app-debug-30:/anim_pulse.xml.flat",
+        "source": "com.example.tictactoe.app-main-32:/anim/pulse.xml"
+    },
+    {
+        "merged": "com.example.tictactoe.app-debug-30:/drawable_tile_selector.xml.flat",
+        "source": "com.example.tictactoe.app-main-32:/drawable/tile_selector.xml"
+    },
+    {
+        "merged": "com.example.tictactoe.app-debug-30:/drawable_tile_winner.xml.flat",
+        "source": "com.example.tictactoe.app-main-32:/drawable/tile_winner.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\drawable_ic_launcher_bg.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\drawable\\ic_launcher_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\layout_activity_menu.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\layout\\activity_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\drawable_bg_gradient.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\drawable\\bg_gradient.xml"
+    },
+    {
+        "merged": "com.example.tictactoe.app-debug-30:/drawable_btn_primary.xml.flat",
+        "source": "com.example.tictactoe.app-main-32:/drawable/btn_primary.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\drawable_btn_secondary.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\drawable\\btn_secondary.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\drawable_btn_primary.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\drawable\\btn_primary.xml"
+    },
+    {
+        "merged": "com.example.tictactoe.app-debug-30:/anim_pop_in.xml.flat",
+        "source": "com.example.tictactoe.app-main-32:/anim/pop_in.xml"
+    },
+    {
+        "merged": "com.example.tictactoe.app-debug-30:/layout_activity_stats.xml.flat",
+        "source": "com.example.tictactoe.app-main-32:/layout/activity_stats.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\anim_pulse.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\anim\\pulse.xml"
+    },
+    {
+        "merged": "com.example.tictactoe.app-debug-30:/layout_activity_main.xml.flat",
+        "source": "com.example.tictactoe.app-main-32:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\layout_activity_stats.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\layout\\activity_stats.xml"
+    },
+    {
+        "merged": "com.example.tictactoe.app-debug-30:/layout_activity_menu.xml.flat",
+        "source": "com.example.tictactoe.app-main-32:/layout/activity_menu.xml"
+    },
+    {
+        "merged": "com.example.tictactoe.app-debug-30:/drawable_ic_launcher_bg.xml.flat",
+        "source": "com.example.tictactoe.app-main-32:/drawable/ic_launcher_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.tictactoe.app-debug-30:/drawable_bg_gradient.xml.flat",
+        "source": "com.example.tictactoe.app-main-32:/drawable/bg_gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\anim_pop_in.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\anim\\pop_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-debug-30:\\drawable_card_bg.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\9.5.0\\com.example.tictactoe.app-main-32:\\drawable\\card_bg.xml"
+    }
+]

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base -->
+    <color name="background">#0F0F1E</color>
+    <color name="background_light">#F5F5FF</color>
+    <color name="surface">#1A1A2E</color>
+    <color name="surface_light">#FFFFFF</color>
+
+    <!-- Tiles -->
+    <color name="tile">#252547</color>
+    <color name="tile_light">#E8E8FF</color>
+    <color name="tile_pressed">#35356A</color>
+    <color name="tile_winner">#FFD600</color>
+    <color name="win_highlight">#FFD600</color>
+
+    <!-- Accents -->
+    <color name="accent">#BB86FC</color>
+    <color name="accent_dark">#7C4DFF</color>
+    <color name="accent_secondary">#03DAC6</color>
+    <color name="x_color">#03DAC6</color>
+    <color name="o_color">#FF7597</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B3B3C4</color>
+    <color name="text_dark">#1A1A2E</color>
+
+    <!-- Gradients -->
+    <color name="grad_start">#1A1A2E</color>
+    <color name="grad_mid">#16213E</color>
+    <color name="grad_end">#0F3460</color>
+
+    <!-- Status -->
+    <color name="success">#4CAF50</color>
+    <color name="danger">#F44336</color>
+    <color name="warning">#FFC107</color>
+</resources>

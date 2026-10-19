@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Tic Tac Toe Pro</string>
+
+    <!-- Scores -->
+    <string name="score_player">You: %1$d</string>
+    <string name="score_ai">AI: %1$d</string>
+    <string name="score_ties">Ties: %1$d</string>
+
+    <!-- Status -->
+    <string name="status_your_turn">Your Turn (X)</string>
+    <string name="status_ai_thinking">AI is thinking…</string>
+    <string name="status_you_win">🎉 You Win!</string>
+    <string name="status_ai_wins">🤖 AI Wins!</string>
+    <string name="status_draw">🤝 It\'s a Draw!</string>
+    <string name="status_player1_turn">Player 1 Turn (X)</string>
+    <string name="status_player2_turn">Player 2 Turn (O)</string>
+    <string name="status_player1_win">🏆 Player 1 Wins!</string>
+    <string name="status_player2_win">🏆 Player 2 Wins!</string>
+
+    <!-- Buttons -->
+    <string name="restart">Restart</string>
+    <string name="menu">Menu</string>
+    <string name="undo">Undo</string>
+    <string name="share">Share Result</string>
+    <string name="play_again">Play Again</string>
+
+    <!-- Menu -->
+    <string name="menu_title">Tic Tac Toe</string>
+    <string name="menu_subtitle">Pro Edition</string>
+    <string name="single_player">Single Player</string>
+    <string name="two_player">Two Players</string>
+    <string name="statistics">Statistics</string>
+    <string name="settings">Settings</string>
+
+    <!-- Difficulty -->
+    <string name="choose_difficulty">Choose Difficulty</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_medium">Medium</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="difficulty_impossible">Impossible</string>
+
+    <!-- Stats -->
+    <string name="stats_title">Statistics</string>
+    <string name="stats_total_games">Total Games</string>
+    <string name="stats_wins">Wins</string>
+    <string name="stats_losses">Losses</string>
+    <string name="stats_draws">Draws</string>
+    <string name="stats_win_rate">Win Rate</string>
+    <string name="stats_reset">Reset Statistics</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_sound">Sound Effects</string>
+    <string name="settings_vibration">Vibration</string>
+    <string name="settings_dark_mode">Dark Mode</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">Game Notifications</string>
+    <string name="notif_channel_desc">Notifications for game events</string>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#BB86FC</color>
+    <color name="accent_dark">#7C4DFF</color>
+    <color name="accent_secondary">#03DAC6</color>
+    <color name="background">#0F0F1E</color>
+    <color name="background_light">#F5F5FF</color>
+    <color name="danger">#F44336</color>
+    <color name="grad_end">#0F3460</color>
+    <color name="grad_mid">#16213E</color>
+    <color name="grad_start">#1A1A2E</color>
+    <color name="o_color">#FF7597</color>
+    <color name="success">#4CAF50</color>
+    <color name="surface">#1A1A2E</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="text_dark">#1A1A2E</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B3B3C4</color>
+    <color name="tile">#252547</color>
+    <color name="tile_light">#E8E8FF</color>
+    <color name="tile_pressed">#35356A</color>
+    <color name="tile_winner">#FFD600</color>
+    <color name="warning">#FFC107</color>
+    <color name="win_highlight">#FFD600</color>
+    <color name="x_color">#03DAC6</color>
+    <dimen name="btn_height">56dp</dimen>
+    <dimen name="btn_radius">16dp</dimen>
+    <dimen name="card_radius">20dp</dimen>
+    <dimen name="screen_padding">20dp</dimen>
+    <dimen name="tile_margin">5dp</dimen>
+    <dimen name="tile_size">100dp</dimen>
+    <dimen name="tile_text_size">44sp</dimen>
+    <string name="app_name">Tic Tac Toe Pro</string>
+    <string name="choose_difficulty">Choose Difficulty</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="difficulty_impossible">Impossible</string>
+    <string name="difficulty_medium">Medium</string>
+    <string name="menu">Menu</string>
+    <string name="menu_subtitle">Pro Edition</string>
+    <string name="menu_title">Tic Tac Toe</string>
+    <string name="notif_channel_desc">Notifications for game events</string>
+    <string name="notif_channel_name">Game Notifications</string>
+    <string name="play_again">Play Again</string>
+    <string name="restart">Restart</string>
+    <string name="score_ai">AI: %1$d</string>
+    <string name="score_player">You: %1$d</string>
+    <string name="score_ties">Ties: %1$d</string>
+    <string name="settings">Settings</string>
+    <string name="settings_dark_mode">Dark Mode</string>
+    <string name="settings_sound">Sound Effects</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_vibration">Vibration</string>
+    <string name="share">Share Result</string>
+    <string name="single_player">Single Player</string>
+    <string name="statistics">Statistics</string>
+    <string name="stats_draws">Draws</string>
+    <string name="stats_losses">Losses</string>
+    <string name="stats_reset">Reset Statistics</string>
+    <string name="stats_title">Statistics</string>
+    <string name="stats_total_games">Total Games</string>
+    <string name="stats_win_rate">Win Rate</string>
+    <string name="stats_wins">Wins</string>
+    <string name="status_ai_thinking">AI is thinking…</string>
+    <string name="status_ai_wins">🤖 AI Wins!</string>
+    <string name="status_draw">🤝 It\'s a Draw!</string>
+    <string name="status_player1_turn">Player 1 Turn (X)</string>
+    <string name="status_player1_win">🏆 Player 1 Wins!</string>
+    <string name="status_player2_turn">Player 2 Turn (O)</string>
+    <string name="status_player2_win">🏆 Player 2 Wins!</string>
+    <string name="status_you_win">🎉 You Win!</string>
+    <string name="status_your_turn">Your Turn (X)</string>
+    <string name="two_player">Two Players</string>
+    <string name="undo">Undo</string>
+    <style name="PrimaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_height">@dimen/btn_height</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:backgroundTint">@color/accent</item>
+        <item name="cornerRadius">@dimen/btn_radius</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+    <style name="SecondaryButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_height">@dimen/btn_height</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="strokeColor">@color/accent</item>
+        <item name="cornerRadius">@dimen/btn_radius</item>
+    </style>
+    <style name="Theme.TicTacToe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/accent_dark</item>
+        <item name="colorOnPrimary">@color/text_dark</item>
+        <item name="colorSecondary">@color/accent_secondary</item>
+        <item name="colorSecondaryVariant">@color/accent_secondary</item>
+        <item name="colorOnSecondary">@color/text_dark</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:windowBackground">@drawable/bg_gradient</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="TileButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">@dimen/tile_size</item>
+        <item name="android:layout_height">@dimen/tile_size</item>
+        <item name="android:layout_margin">@dimen/tile_margin</item>
+        <item name="android:textSize">@dimen/tile_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:background">@drawable/tile_selector</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+</resources>

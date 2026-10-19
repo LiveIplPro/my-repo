@@ -1,0 +1,349 @@
+D:\APK Buid\app\build.gradle:12: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk 34
+        ~~~~~~~~~~~~
+D:\APK Buid\app\build.gradle.kts:12: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk = 34
+        ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application or sdk runs on a version of Android that is more
+   recent than your targetSdk specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdk is
+   less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdk to the highest available value. Then
+   test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+D:\APK Buid\gradle\wrapper\gradle-wrapper.properties:3: Warning: A newer version of Gradle than 9.5.0 is available: 9.8.1 [AndroidGradlePluginVersion]
+distributionUrl=https\://services.gradle.org/distributions/gradle-9.5.0-bin.zip
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+D:\APK Buid\app\build.gradle:7: Warning: A newer version of compileSdk than 34 is available: 37 [GradleDependency]
+    compileSdk 34
+    ~~~~~~~~~~~~~
+D:\APK Buid\app\build.gradle:35: Warning: A newer version of androidx.core:core-ktx than 1.13.1 is available: 1.19.1 [GradleDependency]
+    implementation 'androidx.core:core-ktx:1.13.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\build.gradle:36: Warning: A newer version of androidx.appcompat:appcompat than 1.7.0 is available: 1.8.0 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\build.gradle:37: Warning: A newer version of com.google.android.material:material than 1.12.0 is available: 1.14.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.12.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\build.gradle:38: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.2 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\build.gradle.kts:7: Warning: A newer version of compileSdk than 34 is available: 37 [GradleDependency]
+    compileSdk = 34
+    ~~~~~~~~~~~~~~~
+D:\APK Buid\app\build.gradle.kts:38: Warning: A newer version of androidx.core:core-ktx than 1.13.1 is available: 1.19.1 [GradleDependency]
+    implementation("androidx.core:core-ktx:1.13.1")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\build.gradle.kts:39: Warning: A newer version of androidx.appcompat:appcompat than 1.7.0 is available: 1.8.0 [GradleDependency]
+    implementation("androidx.appcompat:appcompat:1.7.0")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\build.gradle.kts:40: Warning: A newer version of com.google.android.material:material than 1.12.0 is available: 1.14.0 [GradleDependency]
+    implementation("com.google.android.material:material:1.12.0")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\build.gradle.kts:41: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.2 [GradleDependency]
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+D:\APK Buid\app\src\main\java\com\example\tictactoe\MainActivity.kt:81: Warning: Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. R.foo.bar) than by name (e.g. getIdentifier("bar", "foo", null)). [DiscouragedApi]
+                resources.getIdentifier("button$i", "id", packageName)
+                          ~~~~~~~~~~~~~
+
+   Explanation for issues of type "DiscouragedApi":
+   Discouraged APIs are allowed and are not deprecated, but they may be unfit
+   for common use (e.g. due to slow performance or subtle behavior).
+
+D:\APK Buid\app\src\main\res\drawable\btn_primary.xml:2: Warning: The resource R.drawable.btn_primary appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+^
+D:\APK Buid\app\src\main\res\drawable\btn_secondary.xml:2: Warning: The resource R.drawable.btn_secondary appears to be unused [UnusedResources]
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+^
+D:\APK Buid\app\src\main\res\values\colors.xml:5: Warning: The resource R.color.background_light appears to be unused [UnusedResources]
+    <color name="background_light">#F5F5FF</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\values\colors.xml:7: Warning: The resource R.color.surface_light appears to be unused [UnusedResources]
+    <color name="surface_light">#FFFFFF</color>
+           ~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\values\colors.xml:11: Warning: The resource R.color.tile_light appears to be unused [UnusedResources]
+    <color name="tile_light">#E8E8FF</color>
+           ~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\values\colors.xml:13: Warning: The resource R.color.tile_winner appears to be unused [UnusedResources]
+    <color name="tile_winner">#FFD600</color>
+           ~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\anim\pulse.xml:2: Warning: The resource R.anim.pulse appears to be unused [UnusedResources]
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+^
+D:\APK Buid\app\src\main\res\values\strings.xml:25: Warning: The resource R.string.play_again appears to be unused [UnusedResources]
+    <string name="play_again">Play Again</string>
+            ~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\values\strings.xml:36: Warning: The resource R.string.choose_difficulty appears to be unused [UnusedResources]
+    <string name="choose_difficulty">Choose Difficulty</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\values\strings.xml:37: Warning: The resource R.string.difficulty_easy appears to be unused [UnusedResources]
+    <string name="difficulty_easy">Easy</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\values\strings.xml:38: Warning: The resource R.string.difficulty_medium appears to be unused [UnusedResources]
+    <string name="difficulty_medium">Medium</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\values\strings.xml:39: Warning: The resource R.string.difficulty_hard appears to be unused [UnusedResources]
+    <string name="difficulty_hard">Hard</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\values\strings.xml:40: Warning: The resource R.string.difficulty_impossible appears to be unused [UnusedResources]
+    <string name="difficulty_impossible">Impossible</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\values\strings.xml:52: Warning: The resource R.string.settings_title appears to be unused [UnusedResources]
+    <string name="settings_title">Settings</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\values\strings.xml:53: Warning: The resource R.string.settings_sound appears to be unused [UnusedResources]
+    <string name="settings_sound">Sound Effects</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\values\strings.xml:54: Warning: The resource R.string.settings_vibration appears to be unused [UnusedResources]
+    <string name="settings_vibration">Vibration</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\values\strings.xml:55: Warning: The resource R.string.settings_dark_mode appears to be unused [UnusedResources]
+    <string name="settings_dark_mode">Dark Mode</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests=true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests=true.
+
+   Available options:
+
+   **skip-libraries** (default is true):
+   Whether the unused resource check should skip reporting unused resources in libraries.
+
+   Many libraries will declare resources that are part of the library surface; other modules depending on the library will also reference the resources. To avoid reporting all these resources as unused (in the context of a library), the unused resource check normally skips reporting unused resources in libraries. Instead, run the unused resource check on the consuming app module (along with `checkDependencies=true`).
+
+   However, there are cases where you want to check that all the resources declared in a library are used; in that case, you can disable the skip option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UnusedResources">
+           <option name="skip-libraries" value="true" />
+       </issue>
+   </lint>
+   ```
+
+D:\APK Buid\app\src\main\java\com\example\tictactoe\PrefsManager.kt:14: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        set(v) = prefs.edit().putInt("player_wins", v).apply()
+                 ~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\PrefsManager.kt:18: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        set(v) = prefs.edit().putInt("ai_wins", v).apply()
+                 ~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\PrefsManager.kt:22: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        set(v) = prefs.edit().putInt("ties", v).apply()
+                 ~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\PrefsManager.kt:27: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        set(v) = prefs.edit().putInt("total_games", v).apply()
+                 ~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\PrefsManager.kt:32: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        set(v) = prefs.edit().putBoolean("sound", v).apply()
+                 ~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\PrefsManager.kt:36: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        set(v) = prefs.edit().putBoolean("vibration", v).apply()
+                 ~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\PrefsManager.kt:40: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        set(v) = prefs.edit().putString("difficulty", v).apply()
+                 ~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\PrefsManager.kt:43: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit().clear().apply()
+        ~~~~~~~~~~~~
+
+   Explanation for issues of type "UseKtx":
+   The Android KTX libraries decorates the Android platform SDK as well as
+   various libraries with more convenient extension functions available from
+   Kotlin, allowing you to use default parameters, named parameters, and
+   more.
+
+   Available options:
+
+   **remove-defaults** (default is true):
+   Whether to skip arguments that match the defaults provided by the extension.
+
+   Extensions often provide default values for some of the parameters. For example:
+   ```kotlin
+   fun Path.readLines(charset: Charset = Charsets.UTF_8): List<String> { return Files.readAllLines(this, charset) }
+   ```
+   This lint check will by default automatically omit parameters that match the default, so if your code was calling
+
+   ```kotlin
+   Files.readAllLines(file, Charset.UTF_8)
+   ```
+   lint would replace this with
+   ```kotlin
+   file.readLines()
+   ```
+   rather than
+
+   ```kotlin
+   file.readLines(Charset.UTF_8
+   ```
+   You can turn this behavior off using this option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="remove-defaults" value="true" />
+       </issue>
+   </lint>
+   ```
+
+   **require-present** (default is true):
+   Whether to only offer extensions already available.
+
+   This option lets you only have lint suggest extension replacements if those extensions are already available on the class path (in other words, you're already depending on the library containing the extension method.)
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="require-present" value="true" />
+       </issue>
+   </lint>
+   ```
+
+D:\APK Buid\app\src\main\java\com\example\tictactoe\MenuActivity.kt:49: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            "Difficulty: ${prefs.difficulty.lowercase().replaceFirstChar { it.uppercase() }}"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\MenuActivity.kt:49: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            "Difficulty: ${prefs.difficulty.lowercase().replaceFirstChar { it.uppercase() }}"
+             ~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\MenuActivity.kt:55: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            "Difficulty: ${prefs.difficulty.lowercase().replaceFirstChar { it.uppercase() }}"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\MenuActivity.kt:55: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            "Difficulty: ${prefs.difficulty.lowercase().replaceFirstChar { it.uppercase() }}"
+             ~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\MenuActivity.kt:70: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                findViewById<TextView>(R.id.tvDifficulty).text = "Difficulty: ${options[which]}"
+                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\MenuActivity.kt:70: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                findViewById<TextView>(R.id.tvDifficulty).text = "Difficulty: ${options[which]}"
+                                                                  ~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\StatsActivity.kt:41: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+        findViewById<TextView>(R.id.tvTotalGames).text = total.toString()
+                                                         ~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\StatsActivity.kt:42: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+        findViewById<TextView>(R.id.tvWins).text = wins.toString()
+                                                   ~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\StatsActivity.kt:43: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+        findViewById<TextView>(R.id.tvLosses).text = losses.toString()
+                                                     ~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\StatsActivity.kt:44: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+        findViewById<TextView>(R.id.tvDraws).text = draws.toString()
+                                                    ~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\java\com\example\tictactoe\StatsActivity.kt:45: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        findViewById<TextView>(R.id.tvWinRate).text = "$winRate%"
+                                                      ~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+D:\APK Buid\app\src\main\res\layout\activity_main.xml:27: Warning: Hardcoded string "YOU", should use @string resource [HardcodedText]
+                android:text="YOU" android:textColor="@color/accent_secondary"
+                ~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\layout\activity_main.xml:30: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                android:layout_height="wrap_content" android:text="0"
+                                                     ~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\layout\activity_main.xml:42: Warning: Hardcoded string "TIES", should use @string resource [HardcodedText]
+                android:text="TIES" android:textColor="@color/warning"
+                ~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\layout\activity_main.xml:45: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                android:layout_height="wrap_content" android:text="0"
+                                                     ~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\layout\activity_main.xml:57: Warning: Hardcoded string "AI", should use @string resource [HardcodedText]
+                android:text="AI" android:textColor="@color/o_color"
+                ~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\layout\activity_main.xml:60: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                android:layout_height="wrap_content" android:text="0"
+                                                     ~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\layout\activity_menu.xml:79: Warning: Hardcoded string "Difficulty: Medium", should use @string resource [HardcodedText]
+        android:text="Difficulty: Medium"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\layout\activity_stats.xml:41: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                android:layout_height="wrap_content" android:text="0"
+                                                     ~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\layout\activity_stats.xml:51: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                android:layout_height="wrap_content" android:text="0"
+                                                     ~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\layout\activity_stats.xml:61: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                android:layout_height="wrap_content" android:text="0"
+                                                     ~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\layout\activity_stats.xml:71: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                android:layout_height="wrap_content" android:text="0"
+                                                     ~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\layout\activity_stats.xml:84: Warning: Hardcoded string "0%", should use @string resource [HardcodedText]
+                android:layout_height="wrap_content" android:text="0%"
+                                                     ~~~~~~~~~~~~~~~~~
+D:\APK Buid\app\src\main\res\layout\activity_stats.xml:104: Warning: Hardcoded string "Back", should use @string resource [HardcodedText]
+        android:text="Back"
+        ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 63 warnings

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tile_size">100dp</dimen>
+    <dimen name="tile_margin">5dp</dimen>
+    <dimen name="tile_text_size">44sp</dimen>
+    <dimen name="screen_padding">20dp</dimen>
+    <dimen name="card_radius">20dp</dimen>
+    <dimen name="btn_radius">16dp</dimen>
+    <dimen name="btn_height">56dp</dimen>
+</resources>
