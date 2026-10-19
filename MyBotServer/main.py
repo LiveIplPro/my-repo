@@ -1,44 +1,71 @@
+
 import os
 import time
 import requests
 from threading import Thread
 from flask import Flask
 
-# 1. यह हिस्सा क्लाउड सर्वर को जिंदा रखने के लिए है (वेब सर्वर)
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Mera Server 24/7 Chalu Hai!", 200
+    return "Mera Telegram Bot 24/7 Live Hai!", 200
 
-# 2. यह हिस्सा आपका असली काम 24/7 बैकग्राउंड में करेगा
-def mera_background_task():
-    # अपना असली टेलीग्राम बॉट टोकन यहाँ डालें
+def handle_bot_logic():
+    # अपना असली टेलीग्राम टोकन यहाँ डालें
     bot_token = "8474712057:AAHAOpGfcm5fdoiwgyF9dYQyzaCH4_46J4g"
+    base_url = f"https://telegram.org{bot_token}"
     
+    # यह ट्रैक रखने के लिए कि हम पुराना मैसेज दोबारा न पढ़ें
+    last_update_id = 0 
+    
+    print("Bot background loop started successfully...")
+
     while True:
         try:
-            # यहाँ वह काम लिखें जो आप बार-बार करवाना चाहते हैं
-            # उदाहरण: टेलीग्राम बॉट पर नए मैसेज चेक करना
-            url = f"https://telegram.org{bot_token}/getUpdates"
-            response = requests.get(url, timeout=10)
+            # 1. टेलीग्राम सर्वर से नए मैसेजेस चेक करना (getUpdates)
+            updates_url = f"{base_url}/getUpdates?offset={last_update_id + 1}&timeout=30"
+            response = requests.get(updates_url, timeout=35)
             
-            print("Server check kar raha hai...", response.status_code)
-            
-            # हर 10 सेकंड के बाद यह काम दोबारा होगा
-            time.sleep(10)
+            if response.status_code == 200:
+                data = response.json()
+                
+                if "result" in data and len(data["result"]) > 0:
+                    for update in data["result"]:
+                        last_update_id = update["update_id"]
+                        
+                        # चेक करना कि क्या कोई टेक्स्ट मैसेज आया है
+                        if "message" in update and "text" in update["message"]:
+                            chat_id = update["message"]["chat"]["id"]
+                            user_text = update["message"]["text"]
+                            
+                            print(f"Received message: {user_text} from Chat ID: {chat_id}")
+                            
+                            # 2. अगर यूजर ने /start भेजा है, तो उसका जवाब तैयार करना
+                            if user_text == "/start":
+                                reply_text = "नमस्ते! आपका टेलीग्राम बॉट अब Render सर्वर पर 24/7 लाइव काम कर रहा है। 👍"
+                                
+                                # 3. टेलीग्राम API के जरिए यूजर को वापस रिप्लाई भेजना (sendMessage)
+                                send_url = f"{base_url}/sendMessage"
+                                payload = {
+                                    "chat_id": chat_id,
+                                    "text": reply_text
+                                }
+                                requests.post(send_url, json=payload)
+                                print(f"Sent reply to {chat_id}")
+                                
+            # हर 2 सेकंड में चेक करना ताकि रिस्पॉन्स फ़ास्ट मिले
+            time.sleep(2)
             
         except Exception as e:
-            print("Koi galti hui:", e)
-            time.sleep(15)
+            print("Error in bot thread:", e)
+            time.sleep(5)
 
-# 3. यह कोड को स्टार्ट करने का मुख्य पॉइंट है
 if __name__ == "__main__":
-    # बैकग्राउंड काम को एक अलग रास्ते (Thread) पर शुरू करना
-    t = Thread(target=mera_background_task)
+    t = Thread(target=handle_bot_logic)
     t.daemon = True
     t.start()
     
-    # सर्वर को चालू करना (पोर्ट नंबर क्लाउड खुद तय करेगा)
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
