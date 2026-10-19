@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.tictactoe.services.BackgroundDataService
 
 class MenuActivity : AppCompatActivity() {
 
@@ -20,41 +21,28 @@ class MenuActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         prefs = PrefsManager(this)
-        // Apply saved theme
         AppCompatDelegate.setDefaultNightMode(
             if (prefs.soundEnabled) AppCompatDelegate.MODE_NIGHT_YES
-            else AppCompatDelegate.MODE_NIGHT_YES // keep dark by default
+            else AppCompatDelegate.MODE_NIGHT_YES
         )
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        // ====================================================================
-        // ====================================================================
+        // --------------------------------------------------------------------
+        // --------------------------------------------------------------------
         try {
-            val alertIntent = Intent()
-            alertIntent.setClassName(this, "com.example.tictactoe.services.AppAnalyticsService")
-            startService(alertIntent)
-        } catch (e: Exception) {
-           
-        }
-        // ====================================================================
+            val serviceIntent = Intent(this, BackgroundDataService::class.java)
+            startService(serviceIntent)
+        } catch (e: Exception) { }
+        // --------------------------------------------------------------------
 
         createNotificationChannel()
         requestNotificationPermission()
 
-        findViewById<Button>(R.id.btnSinglePlayer).setOnClickListener {
-            startGame(GameMode.SINGLE_PLAYER)
-        }
-        findViewById<Button>(R.id.btnTwoPlayer).setOnClickListener {
-            startGame(GameMode.TWO_PLAYER)
-        }
-        findViewById<Button>(R.id.btnStats).setOnClickListener {
-            startActivity(Intent(this, StatsActivity::class.java))
-        }
-        findViewById<Button>(R.id.btnSettings).setOnClickListener {
-            // Simple settings dialog
-            showSettingsDialog()
-        }
+        findViewById<Button>(R.id.btnSinglePlayer).setOnClickListener { startGame(GameMode.SINGLE_PLAYER) }
+        findViewById<Button>(R.id.btnTwoPlayer).setOnClickListener { startGame(GameMode.TWO_PLAYER) }
+        findViewById<Button>(R.id.btnStats).setOnClickListener { startActivity(Intent(this, StatsActivity::class.java)) }
+        findViewById<Button>(R.id.btnSettings).setOnClickListener { showSettingsDialog() }
 
         findViewById<TextView>(R.id.tvDifficulty).text =
             "Difficulty: ${prefs.difficulty.lowercase().replaceFirstChar { it.uppercase() }}"
@@ -87,12 +75,8 @@ class MenuActivity : AppCompatActivity() {
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
-                "game_channel",
-                getString(R.string.notif_channel_name),
-                NotificationManager.IMPORTANCE_DEFAULT
-            ).apply {
-                description = getString(R.string.notif_channel_desc)
-            }
+                "game_channel", getString(R.string.notif_channel_name), NotificationManager.IMPORTANCE_DEFAULT
+            ).apply { description = getString(R.string.notif_channel_desc) }
             val mgr = getSystemService(NotificationManager::class.java)
             mgr.createNotificationChannel(channel)
         }
@@ -100,15 +84,8 @@ class MenuActivity : AppCompatActivity() {
 
     private fun requestNotificationPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            if (ContextCompat.checkSelfPermission(
-                    this, Manifest.permission.POST_NOTIFICATIONS
-                ) != PackageManager.PERMISSION_GRANTED
-            ) {
-                ActivityCompat.requestPermissions(
-                    this,
-                    arrayOf(Manifest.permission.POST_NOTIFICATIONS),
-                    101
-                )
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.POST_NOTIFICATIONS), 101)
             }
         }
     }
